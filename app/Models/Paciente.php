@@ -11,7 +11,7 @@ class Paciente extends Model
 {
     use HasFactory;
 
-    public function propietarios(): BelongsTo
+    public function propietario(): BelongsTo
     {
         return $this->belongsTo(Propietario::class);
     }

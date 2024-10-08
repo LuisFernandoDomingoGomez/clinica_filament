@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('tratamientos', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion');            
+            $table->string('descripcion');
             $table->string('notas')->nullable();
-            $table->foreingId('paciente_id'->constrained('pacientes')->cascadeOnDelete());
+            $table->foreignId('paciente_id')->constrained('pacientes')->cascadeOnDelete();
             $table->unsignedInteger('precio')->nullable();
             $table->timestamps();
         });

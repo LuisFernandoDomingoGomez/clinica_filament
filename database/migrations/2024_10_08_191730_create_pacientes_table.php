@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('fecha_nacimiento');
             $table->string('nombre');
-            $table->foreingId('propietario_id'->constrained('propietarios')->cascadeOnDelete());
+            $table->foreignId('propietario_id')->constrained('propietarios')->cascadeOnDelete();
             $table->string('type');
             $table->timestamps();
         });
