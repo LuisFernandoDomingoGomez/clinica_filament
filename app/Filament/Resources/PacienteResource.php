@@ -97,6 +97,7 @@ class PacienteResource extends Resource
     {
         return [
             //
+            RelationManagers\TratamientosRelationManager::class,
         ];
     }
 
