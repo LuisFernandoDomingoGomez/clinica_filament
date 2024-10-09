@@ -18,9 +18,17 @@ class TratamientosRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('descripcion')
+                Forms\Components\TextInput::make('Descripcion')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->columnSpan('full'),
+                Forms\Components\Textarea::make('Notas')
+                    ->maxLength(65535)
+                    ->columnSpan('full'),
+                Forms\Components\TextInput::make('Precio')
+                    ->required()
+                    ->prefix('$')
+                    ->maxValue('2000000000000'),
             ]);
     }
 
